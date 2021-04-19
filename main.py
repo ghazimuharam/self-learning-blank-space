@@ -1,21 +1,20 @@
 #!/usr/bin/env python3
 from src import MovieDataExtractor
 from pathlib import Path
-import json
-"""
-Module Docstring
-"""
 
 __author__ = "Muhammad Ghazi Muharam"
 __version__ = "0.1.0"
-__license__ = "MIT"
 
+# Movies data directory
 JSON_DIR = 'path/to/dir'
+
+# Location to output json file
 JSON_OUTPUT = 'path/filename.json'
 
 
 def main():
     """ Main entry point of the app """
+
     files = list(
         Path(JSON_DIR).glob('*.json'))
 
