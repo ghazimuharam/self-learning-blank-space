@@ -10,16 +10,19 @@ __author__ = "Muhammad Ghazi Muharam"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
+JSON_DIR = 'path/to/dir'
+JSON_OUTPUT = 'path/filename.json'
+
 
 def main():
     """ Main entry point of the app """
     files = list(
-        Path('/home/ghazimuharam/Documents/Data Engineer/Data/Self-learning 1/movies').glob('*.json'))
+        Path(JSON_DIR).glob('*.json'))
 
     number_of_files = len(files)
     iteration = 1
 
-    with open('output.json', 'w') as outfile:
+    with open(JSON_OUTPUT, 'w') as outfile:
         outfile.write('[')
         for file in files:
             print(
